@@ -1,0 +1,12 @@
+D:\Project\Project_2017\MEMO_JOB\MEMO_JOB\obj\Debug\netcoreapp2.0\MEMO_JOB.csproj.CoreCompileInputs.cache
+D:\Project\Project_2017\MEMO_JOB\MEMO_JOB\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+D:\Project\Project_2017\MEMO_JOB\MEMO_JOB\obj\Debug\netcoreapp2.0\MEMO_JOB.AssemblyInfoInputs.cache
+D:\Project\Project_2017\MEMO_JOB\MEMO_JOB\obj\Debug\netcoreapp2.0\MEMO_JOB.AssemblyInfo.cs
+D:\Project\Project_2017\MEMO_JOB\MEMO_JOB\bin\Debug\netcoreapp2.0\MEMO_JOB.deps.json
+D:\Project\Project_2017\MEMO_JOB\MEMO_JOB\bin\Debug\netcoreapp2.0\MEMO_JOB.runtimeconfig.json
+D:\Project\Project_2017\MEMO_JOB\MEMO_JOB\bin\Debug\netcoreapp2.0\MEMO_JOB.runtimeconfig.dev.json
+D:\Project\Project_2017\MEMO_JOB\MEMO_JOB\bin\Debug\netcoreapp2.0\MEMO_JOB.dll
+D:\Project\Project_2017\MEMO_JOB\MEMO_JOB\bin\Debug\netcoreapp2.0\MEMO_JOB.pdb
+D:\Project\Project_2017\MEMO_JOB\MEMO_JOB\obj\Debug\netcoreapp2.0\MEMO_JOB.dll
+D:\Project\Project_2017\MEMO_JOB\MEMO_JOB\obj\Debug\netcoreapp2.0\MEMO_JOB.pdb
+D:\Project\Project_2017\MEMO_JOB\MEMO_JOB\obj\Debug\netcoreapp2.0\MEMO_JOB.csprojResolveAssemblyReference.cache

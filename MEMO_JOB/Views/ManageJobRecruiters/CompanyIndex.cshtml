@@ -1,0 +1,74 @@
+﻿@model MEMO_JOB.Models.Recruiters.ManageViewModels.CompanyIndexViewModel
+
+@{
+    ViewData["Title"] = "CompanyIndex";
+}
+
+<h2>CompanyIndex</h2>
+
+<h4>@ViewData["Title"]</h4>
+<hr />
+@Html.Partial("_StatusMessage", Model.StatusMessage)
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CompanyIndex">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CompanyBanner" class="control-label"></label>
+                <input asp-for="CompanyBanner" class="form-control" />
+                <span asp-validation-for="CompanyBanner" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CompanyName" class="control-label"></label>
+                <input asp-for="CompanyName" class="form-control" />
+                <span asp-validation-for="CompanyName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CompanySize" class="control-label"></label>
+                <input asp-for="CompanySize" class="form-control" />
+                <span asp-validation-for="CompanySize" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CompanyType" class="control-label"></label>
+                <input asp-for="CompanyType" class="form-control" />
+                <span asp-validation-for="CompanyType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CompanyInfo" class="control-label"></label>
+                <input asp-for="CompanyInfo" class="form-control" />
+                <span asp-validation-for="CompanyInfo" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="CompanyImage" class="control-label"></label>
+                <input asp-for="CompanyImage" class="form-control" />
+                <span asp-validation-for="CompanyImage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CompanyLogo" class="control-label"></label>
+                <input asp-for="CompanyLogo" class="form-control" />
+                <span asp-validation-for="CompanyLogo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CompanyTaxcode" class="control-label"></label>
+                <input asp-for="CompanyTaxcode" class="form-control" />
+                <span asp-validation-for="CompanyTaxcode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CompanyWebsite" class="control-label"></label>
+                <input asp-for="CompanyWebsite" class="form-control" />
+                <span asp-validation-for="CompanyWebsite" class="text-danger"></span>
+            </div>
+
+
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

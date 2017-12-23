@@ -1,0 +1,77 @@
+﻿@using MEMO_JOB.Models
+@using Microsoft.AspNetCore.Identity
+@using MEMO_JOB.Models.JobSeekers
+@using MEMO_JOB.Models.Recruiters
+@using Microsoft.AspNetCore.Authorization
+@using MEMO_JOB.Extensions
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+@inject IAuthorizationService AuthorizationService
+@inject GetRoleLogin getInfoUser;
+@{
+    var GetId = "a";
+    var GetRole = "s";
+    var GetFullName = "s";
+}
+
+
+@if (SignInManager.IsSignedIn(User))
+{
+    GetId = UserManager.GetUserId(User);
+    GetRole = getInfoUser._context.AppJobUsers.Where(x => x.Id == GetId).Select(a => a.Discriminator).Single();
+    GetFullName = getInfoUser._context.AppJobUsers.Where(x => x.Id == GetId).Select(a => a.FullName).Single();
+
+
+    @if (GetRole == "JobSeekerUser")
+    {
+        <form asp-area="" asp-controller="AccountJobSeekers" asp-action="Logout" method="post" id="logoutForm" class="navbar-right">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a asp-area="" asp-controller="ManageJobSeekers" asp-action="Index" title="Manage">Hello @GetFullName</a>
+                </li>
+                <li>
+                    <button type="submit" class="btn btn-link navbar-btn navbar-link">Log out</button>
+                </li>
+            </ul>
+        </form>
+    }
+    else if (GetRole == "RecruiterUser")
+    {
+        <form asp-area="" asp-controller="AccountJobRecruiters" asp-action="Logout" method="post" id="logoutForm" class="navbar-right">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a asp-area="" asp-controller="ManageJobRecruiters" asp-action="Index" title="Manage">Hello @GetFullName</a>
+                </li>
+                <li>
+                    <button type="submit" class="btn btn-link navbar-btn navbar-link">Log out</button>
+                </li>
+            </ul>
+        </form>
+    }
+    else
+    {
+        <form asp-area="" asp-controller="AccountJobRecruiters" asp-action="Logout" method="post" id="logoutForm" class="navbar-right">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a asp-area="" asp-controller="ManageJobRecruiters" asp-action="Index" title="Manage">@GetRole</a>
+                </li>
+                <li>
+                    <button type="submit" class="btn btn-link navbar-btn navbar-link">Log out</button>
+                </li>
+            </ul>
+        </form>
+    }
+
+}
+else
+{
+    <ul class="nav navbar-nav navbar-right">
+        <li><a asp-area="" asp-controller="AccountJobSeekers" asp-action="Register">Người tìm việc đăng ký</a></li>
+        <li><a asp-area="" asp-controller="AccountJobSeekers" asp-action="Login">Người tìm việc đăng nhập</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+        <li><a asp-area="" asp-controller="AccountJobRecruiters" asp-action="Register">Người tuyển dụng đăng ký</a></li>
+        <li><a asp-area="" asp-controller="AccountJobRecruiters" asp-action="Login">Người tuyển dụng đăng nhập</a></li>
+    </ul>
+}
